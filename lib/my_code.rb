@@ -1,4 +1,8 @@
 require 'pry'# Your Code Here
 def map(array)
-  yield (-1)
+  empty = []
+  array.each do |item|
+    empty << yield(item)
+  end
+  return empty
 end
