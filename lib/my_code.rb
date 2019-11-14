@@ -11,7 +11,6 @@ def reduce(array)
   empty = []
   array.each do |item|
     empty << yield(item)
-      return false
   end
   return empty
 end
