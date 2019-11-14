@@ -7,10 +7,18 @@ def map(array)
   return empty
 end
 
-def reduce(array)
-  empty = []
-  array.each do |item|
-    empty << yield(item)
+def reduce(array, starting_point=nil)
+
+  if starting_point
+    total = starting_point
+    index = 0
+  else
+    total = array[0]
+    index = 1
   end
-  return empty
+  while index < array.length
+    total = yield(total,array[index])
+    index += 1
+  end
+return total
 end
