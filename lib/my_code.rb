@@ -6,3 +6,8 @@ def map(array)
   end
   return empty
 end
+
+def reduce(array)
+  array.each do |item|
+    
+end
